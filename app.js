@@ -75,7 +75,7 @@ complete the rest of the lab.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Two here:
 
-
+console.log(pokemon[129].name + " " + pokemon[129].type)
 
 // console.dir(pokemon, { maxArrayLength: null })
 
@@ -107,7 +107,7 @@ console.log as needed to help you complete the rest of the lab.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Three here:
 
-
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Four
@@ -118,7 +118,8 @@ Select a pokemon from the `pokemon` data with a starter property value set to
 ---------------------------------------------------------------------------- */
 // Solve Exercise Four here:
 
-
+game.party.push(pokemon[0])
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Five
@@ -129,8 +130,8 @@ to the `game.party` array.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Five here:
 
-
-
+game.party.push(pokemon[58], pokemon[100], pokemon[129])
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Six
