@@ -1,0 +1,13 @@
+{
+  "name": "js-objects-lab",
+  "version": "1.0.0",
+  "description": "A lab for testing your ability to use and manipulate Objects in JavaScript.",
+  "main": "app.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEI-Remote/js-objects-lab.git"
+  },
+  "author": "mail@davidstinson.dev",
+  "license": "MIT"
+}
