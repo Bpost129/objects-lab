@@ -75,7 +75,7 @@ complete the rest of the lab.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Two here:
 
-console.log(pokemon[58].name)
+
 
 // console.dir(pokemon, { maxArrayLength: null })
 
@@ -107,7 +107,7 @@ console.log as needed to help you complete the rest of the lab.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Three here:
 
-console.log(game);
+
 
 /* ----------------------------------------------------------------------------
 Exercise Four
@@ -118,7 +118,7 @@ Select a pokemon from the `pokemon` data with a starter property value set to
 ---------------------------------------------------------------------------- */
 // Solve Exercise Four here:
 
-game.party.push(pokemon[3]);
+
 
 /* ----------------------------------------------------------------------------
 Exercise Five
@@ -129,7 +129,7 @@ to the `game.party` array.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Five here:
 
-game.party.push(pokemon[61], pokemon[79], pokemon[122]);
+
 
 
 /* ----------------------------------------------------------------------------
@@ -141,9 +141,7 @@ descenting order from the greatest to the least.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Six here:
 
-game.party.sort(function (a, b) {
-  return b.hp - a.hp
-})
+
 
 /* ----------------------------------------------------------------------------
 Exercise Seven
@@ -154,11 +152,7 @@ Complete the gyms that have a difficulty below 3 (change the value of
 ---------------------------------------------------------------------------- */
 // Solve Exercise Seven here:
 
-game.gyms.forEach(function (gym) {
-  if (gym.difficulty < 3) {
-    gym.completed = true
-  }
-})
+
 
 /* ----------------------------------------------------------------------------
 Exercise Eight
@@ -177,7 +171,7 @@ More Hints: The existing starter pokemon will be *replaced* in your party with
 ---------------------------------------------------------------------------- */
 // Solve Exercise Eight here:
 
-game.party.splice(3, 1, pokemon[4])
+
 
 /* ----------------------------------------------------------------------------
 Exercise Nine
@@ -187,9 +181,7 @@ Print out the name of each pokemon in your party.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Nine here:
 
-game.party.forEach(function (pokemon) {
-  console.log(pokemon.name)
-})
+
 
 /* ----------------------------------------------------------------------------
 Exercise Ten
@@ -199,11 +191,7 @@ Print out the name of every starter pokemon.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Ten here:
 
-pokemon.forEach(function (pokeman) {
-  if (pokeman.starter) {
-    console.log(pokeman.name)
-  }
-})
+
 
 /* ----------------------------------------------------------------------------
 Exercise Eleven
@@ -219,11 +207,7 @@ pokemon object of your choice from the `pokemon` data to catch it.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Eleven here:
 
-game.catchPokemon = function(pokemonObj){
-  game.party.push(pokemonObj)
-}
 
-game.catchPokemon(pokemon[142])
 
 /* ----------------------------------------------------------------------------
 Exercise Twelve
@@ -244,13 +228,7 @@ decremented.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Twelve here:
 
-game.catchPokemon = function(pokemonObj){
-  game.party.push(pokemonObj)
-  game.items[1].quantity -= 1
-}
 
-game.catchPokemon(pokemon[105])
-console.log(game.items)
 
 /* ----------------------------------------------------------------------------
 Exercise Thirteen
@@ -261,11 +239,7 @@ Complete the gyms that have a difficulty below 6 (change the value of
 ---------------------------------------------------------------------------- */
 // Solve Exercise Thirteen here:
 
-game.gyms.forEach(function (gym) {
-  if (gym.difficulty < 6) {
-    gym.completed = true
-  }
-})
+
 
 /* ----------------------------------------------------------------------------
 Exercise Fourteen
@@ -289,25 +263,7 @@ property, the logged value would be: `{ completed: 5, incomplete: 3 }`.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Fourteen here:
 
-const completedGyms = {
-  complete: 0,
-  incomplete: 0,
-}
 
-game.gymStatus = function(){
-  
-  game.gyms.forEach(function (gym) {
-    if (gym.completed) {
-      completedGyms.complete += 1
-    } else {
-      completedGyms.incomplete += 1
-    }
-  })
-}
-
-game.gymStatus();
-
-console.log(completedGyms)
 
 /* ----------------------------------------------------------------------------
 Exercise Fifteen
@@ -320,16 +276,7 @@ Add a method called `partyCount` to the `game` object. This method should:
 ---------------------------------------------------------------------------- */
 // Solve Exercise Fifteen here:
 
-game.partyCount = function(){
-  let total = 0;
-  game.party.forEach(function (pokemon) {
-    total += 1
-  })
-  console.log(total)
-  return total
-}
 
-game.partyCount()
 
 /* ----------------------------------------------------------------------------
 Exercise Sixteen
@@ -340,11 +287,7 @@ Complete the gyms that have a difficulty below 8 (change the value of
 ---------------------------------------------------------------------------- */
 // Solve Exercise Sixteen here:
 
-game.gyms.forEach(function (gym) {
-  if (gym.difficulty < 8) {
-    gym.completed = true
-  }
-})
+
 
 /* ----------------------------------------------------------------------------
 Exercise Seventeen
@@ -354,7 +297,7 @@ Print the `game` object.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Seventeen here:
 
-console.log(game)
+
 
 // ------------------- 🚀🚀🚀🚀🚀🚀 LEVEL UP 🚀🚀🚀🚀🚀🚀 ------------------- //
 // Everything in the lab past this point is OPTIONAL. You are NOT REQUIRED 
@@ -385,24 +328,32 @@ decremented.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Eighteen here:
 
-game.collection = [];
 
-game.catchPokemon = function(pokemonObj){
-  if (game.party.length <= 6) {
-    game.party.push(pokemonObj)
-  } 
 
-  if (game.party.length === 7) {
-    game.party.sort(function (a, b) {
-      return b.hp - a.hp
-    })
-    game.collection.push(game.party.pop())
-  }
-  game.items[1].quantity -= 1
-}
 
-game.catchPokemon(pokemon[39])
-console.log(game.items)
+
+
+
+
+
+// game.collection = [];
+
+// game.catchPokemon = function(pokemonObj){
+//   if (game.party.length <= 6) {
+//     game.party.push(pokemonObj)
+//   } 
+
+//   if (game.party.length === 7) {
+//     game.party.sort(function (a, b) {
+//       return b.hp - a.hp
+//     })
+//     game.collection.push(game.party.pop())
+//   }
+//   game.items[1].quantity -= 1
+// }
+
+// game.catchPokemon(pokemon[39])
+// console.log(game.items)
 
 /* ----------------------------------------------------------------------------
 Exercise Nineteen - OPTIONAL LEVEL UP 🚀
@@ -419,24 +370,33 @@ Also ensure that the pokemon isn't added to the `game.party` or the
 ---------------------------------------------------------------------------- */
 // Solve Exercise Nineteen here:
 
-game.catchPokemon = function(pokemonObj){
-  if (game.items[1].quantity === 0) {
-    console.log("You have no more pokeballs!")
-  } else {
-    if (game.party.length <= 6) {
-      game.party.push(pokemonObj)
-    } 
+
+
+
+
+
+
+
+
+
+// game.catchPokemon = function(pokemonObj){
+//   if (game.items[1].quantity === 0) {
+//     console.log("You have no more pokeballs!")
+//   } else {
+//     if (game.party.length <= 6) {
+//       game.party.push(pokemonObj)
+//     } 
   
-    if (game.party.length === 7) {
-      game.party.sort(function (a, b) {
-        return b.hp - a.hp
-      })
-      game.collection.push(game.party.pop())
-    }
-    game.items[1].quantity -= 1
-  }
+//     if (game.party.length === 7) {
+//       game.party.sort(function (a, b) {
+//         return b.hp - a.hp
+//       })
+//       game.collection.push(game.party.pop())
+//     }
+//     game.items[1].quantity -= 1
+//   }
   
-}
+// }
 
 /* ----------------------------------------------------------------------------
 Exercise Twenty - OPTIONAL LEVEL UP 🚀
@@ -457,24 +417,33 @@ pokemon name is passed in, and also ensure that the pokemon isn't added to the
 ---------------------------------------------------------------------------- */
 // Solve Exercise Twenty here:
 
-game.catchPokemon = function(pokemonObj){
-  if (game.items[1].quantity === 0) {
-    console.log("You have no more pokeballs!")
-  } else {
-    if (game.party.length <= 6) {
-      game.party.push(pokemonObj)
-    } 
+
+
+
+
+
+
+
+
+
+// game.catchPokemon = function(pokemonObj){
+//   if (game.items[1].quantity === 0) {
+//     console.log("You have no more pokeballs!")
+//   } else {
+//     if (game.party.length <= 6) {
+//       game.party.push(pokemonObj)
+//     } 
   
-    if (game.party.length === 7) {
-      game.party.sort(function (a, b) {
-        return b.hp - a.hp
-      })
-      game.collection.push(game.party.pop())
-    }
-    game.items[1].quantity -= 1
-  }
+//     if (game.party.length === 7) {
+//       game.party.sort(function (a, b) {
+//         return b.hp - a.hp
+//       })
+//       game.collection.push(game.party.pop())
+//     }
+//     game.items[1].quantity -= 1
+//   }
   
-}
+// }
 
 /* ----------------------------------------------------------------------------
 Exercise Twenty-One - OPTIONAL LEVEL UP 🚀
@@ -515,6 +484,4 @@ objects from false to true).
 ---------------------------------------------------------------------------- */
 // Solve Exercise Twenty-Two here:
 
-game.gyms.forEach(function (gym) {
-    gym.completed = true
-})
+
