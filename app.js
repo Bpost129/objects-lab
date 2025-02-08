@@ -247,10 +247,11 @@ decremented.
 
 game.catchPokemon = (pokemonObj) => {
   game.party.push(pokemonObj)
+  game.items[1].quantity -= 1
 }
 
-game.catchPokemon(pokemon[62])
-
+game.catchPokemon(pokemon[82])
+// console.log(game)
 /* ----------------------------------------------------------------------------
 Exercise Thirteen
 
