@@ -156,7 +156,10 @@ Complete the gyms that have a difficulty below 3 (change the value of
 ---------------------------------------------------------------------------- */
 // Solve Exercise Seven here:
 
-
+game.gyms.map(gym => {
+  if (gym.difficulty < 3) return gym.completed = true
+})
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Eight
