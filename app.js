@@ -178,7 +178,8 @@ More Hints: The existing starter pokemon will be *replaced* in your party with
 ---------------------------------------------------------------------------- */
 // Solve Exercise Eight here:
 
-
+game.party.splice(1, 1, pokemon[1])
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Nine
