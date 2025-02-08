@@ -75,7 +75,7 @@ complete the rest of the lab.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Two here:
 
-console.log(pokemon[129].name + " " + pokemon[129].type)
+console.log("name: " + pokemon[129].name + " type: " + pokemon[129].type + " hp: " + pokemon[129].hp)
 
 // console.dir(pokemon, { maxArrayLength: null })
 
@@ -189,7 +189,9 @@ Print out the name of each pokemon in your party.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Nine here:
 
-
+// game.party.forEach(poke => {
+//   console.log(poke.name)
+// })
 
 /* ----------------------------------------------------------------------------
 Exercise Ten
@@ -199,7 +201,9 @@ Print out the name of every starter pokemon.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Ten here:
 
-
+// pokemon.forEach(poke => {
+//   console.log(poke.name)
+// })
 
 /* ----------------------------------------------------------------------------
 Exercise Eleven
@@ -215,7 +219,12 @@ pokemon object of your choice from the `pokemon` data to catch it.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Eleven here:
 
+game.catchPokemon = (pokemonObj) => {
+  game.party.push(pokemonObj)
+}
 
+game.catchPokemon(pokemon[62])
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Twelve
@@ -236,7 +245,11 @@ decremented.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Twelve here:
 
+game.catchPokemon = (pokemonObj) => {
+  game.party.push(pokemonObj)
+}
 
+game.catchPokemon(pokemon[62])
 
 /* ----------------------------------------------------------------------------
 Exercise Thirteen
