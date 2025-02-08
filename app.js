@@ -142,7 +142,10 @@ descenting order from the greatest to the least.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Six here:
 
-
+game.party.sort((a,b) => {
+  return a.hp - b.hp
+})
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Seven
