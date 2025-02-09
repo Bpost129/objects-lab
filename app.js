@@ -348,7 +348,7 @@ Print the `game` object.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Seventeen here:
 
-console.log(game)
+// console.log(game)
 
 // ------------------- 🚀🚀🚀🚀🚀🚀 LEVEL UP 🚀🚀🚀🚀🚀🚀 ------------------- //
 // Everything in the lab past this point is OPTIONAL. You are NOT REQUIRED 
@@ -379,9 +379,23 @@ decremented.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Eighteen here:
 
+game.collection = []
 
+game.catchPokemon = (pokemonObj) => {
+  if (game.party.length === 6) {
+    game.party.push(pokemonObj)
+    const addition = game.party.shift()
+    game.collection.push(addition)
+  } else {
+    game.party.push(pokemonObj)
+  }
 
+  game.items[1].quantity -= 1
+}
 
+game.catchPokemon(pokemon[90])
+game.catchPokemon(pokemon[103])
+// console.log(game)
 
 
 
