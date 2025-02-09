@@ -75,7 +75,7 @@ complete the rest of the lab.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Two here:
 
-console.log("name: " + pokemon[129].name + " type: " + pokemon[129].type + " hp: " + pokemon[129].hp)
+console.log("name: " + pokemon[141].name + " type: " + pokemon[141].type + " hp: " + pokemon[141].hp)
 
 // console.dir(pokemon, { maxArrayLength: null })
 
@@ -319,13 +319,13 @@ game.partyCount = () => {
   const count = game.party.reduce((prev, poke) => {
     return prev += 1
   }, 0)
-  console.log(count)
+  console.log("party count: " + count)
   return count
 }
 
 game.partyCount()
 
-console.log(game)
+// console.log(game)
 /* ----------------------------------------------------------------------------
 Exercise Sixteen
 
@@ -335,7 +335,10 @@ Complete the gyms that have a difficulty below 8 (change the value of
 ---------------------------------------------------------------------------- */
 // Solve Exercise Sixteen here:
 
-
+game.gyms.map(gym => {
+  if (gym.difficulty < 8) return gym.completed = true
+})
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Seventeen
