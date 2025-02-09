@@ -436,9 +436,23 @@ Also ensure that the pokemon isn't added to the `game.party` or the
 // Solve Exercise Nineteen here:
 
 
+game.catchPokemon = (pokemonObj) => {
+  if (game.items[1].quantity > 0) {
+    if (game.party.length === 6) {
+      game.party.push(pokemonObj)
+      const addition = game.party.shift()
+      game.collection.push(addition)
+    } else {
+      game.party.push(pokemonObj)
+    }
+    game.items[1].quantity -= 1
+  } else {
+    console.log('You don\'t have any pokeballs!')
+  }
+}
 
-
-
+game.catchPokemon(pokemon[135])
+console.log(game)
 
 
 
