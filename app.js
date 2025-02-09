@@ -288,7 +288,21 @@ property, the logged value would be: `{ completed: 5, incomplete: 3 }`.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Fourteen here:
 
+game.gymStatus = () => {
+  const gymStats = {
+    completed: 0,
+    incomplete: 0
+  }
 
+  game.gyms.forEach(gym => {
+    if (gym.completed) gymStats.completed += 1
+    else gymStats.incomplete += 1
+  })
+
+  console.log(gymStats)
+}
+
+game.gymStatus()
 
 /* ----------------------------------------------------------------------------
 Exercise Fifteen
@@ -301,8 +315,17 @@ Add a method called `partyCount` to the `game` object. This method should:
 ---------------------------------------------------------------------------- */
 // Solve Exercise Fifteen here:
 
+game.partyCount = () => {
+  const count = game.party.reduce((prev, poke) => {
+    return prev += 1
+  }, 0)
+  console.log(count)
+  return count
+}
 
+game.partyCount()
 
+console.log(game)
 /* ----------------------------------------------------------------------------
 Exercise Sixteen
 
