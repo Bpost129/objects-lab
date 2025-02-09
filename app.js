@@ -348,7 +348,7 @@ Print the `game` object.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Seventeen here:
 
-
+console.log(game)
 
 // ------------------- 🚀🚀🚀🚀🚀🚀 LEVEL UP 🚀🚀🚀🚀🚀🚀 ------------------- //
 // Everything in the lab past this point is OPTIONAL. You are NOT REQUIRED 
