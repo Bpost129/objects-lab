@@ -261,7 +261,10 @@ Complete the gyms that have a difficulty below 6 (change the value of
 ---------------------------------------------------------------------------- */
 // Solve Exercise Thirteen here:
 
-
+game.gyms.map(gym => {
+  if (gym.difficulty < 6) return gym.completed = true
+})
+// console.log(game)
 
 /* ----------------------------------------------------------------------------
 Exercise Fourteen
