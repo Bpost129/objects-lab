@@ -522,7 +522,7 @@ game.catchPokemon = (poke) => {
 }
 
 
-game.catchPokemon('niTe')
+game.catchPokemon('drAGOniTe')
 console.log(game)
 
 
@@ -575,7 +575,10 @@ Log the object when it's constructed.
 ---------------------------------------------------------------------------- */
 // Solve Exercise Twenty-One here:
 
+const pokeTypes = pokemon.reduce((prev, poke) => {
 
+
+}, {})
 
 /* ----------------------------------------------------------------------------
 Exercise Twenty-Two - OPTIONAL LEVEL UP 🚀
@@ -586,4 +589,7 @@ objects from false to true).
 ---------------------------------------------------------------------------- */
 // Solve Exercise Twenty-Two here:
 
-
+game.gyms.map(gym => {
+  return gym.completed = true
+})
+console.log(game)
