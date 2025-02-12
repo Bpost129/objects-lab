@@ -452,7 +452,7 @@ game.catchPokemon = (pokemonObj) => {
 }
 
 game.catchPokemon(pokemon[135])
-console.log(game)
+// console.log(game)
 
 
 
@@ -497,10 +497,32 @@ pokemon name is passed in, and also ensure that the pokemon isn't added to the
 // Solve Exercise Twenty here:
 
 
+game.catchPokemon = (poke) => {
+  const pokemonObj = pokemon.find(mon => {
+    return mon.name.toLowerCase() === poke.toLowerCase()
+  })
+
+  if (!pokemonObj) {
+    return 'Pokemon does not exist'
+  }
+
+  if (game.items[1].quantity > 0) {
+    if (game.party.length === 6) {
+      game.party.push(pokemonObj)
+      const addition = game.party.shift()
+      game.collection.push(addition)
+    } else {
+      game.party.push(pokemonObj)
+    }
+    game.items[1].quantity -= 1
+  } else {
+    console.log('You don\'t have any pokeballs!')
+  }
+}
 
 
-
-
+game.catchPokemon('mew')
+console.log(game)
 
 
 
