@@ -503,7 +503,8 @@ game.catchPokemon = (poke) => {
   })
 
   if (!pokemonObj) {
-    return 'Pokemon does not exist'
+    console.log('Pokemon does not exist')
+    return
   }
 
   if (game.items[1].quantity > 0) {
@@ -521,7 +522,7 @@ game.catchPokemon = (poke) => {
 }
 
 
-game.catchPokemon('mew')
+game.catchPokemon('niTe')
 console.log(game)
 
 
